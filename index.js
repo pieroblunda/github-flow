@@ -13,7 +13,7 @@ let container, graph, master, feature, featureB;
 container = document.getElementById("scenario-01");
 graph = GitgraphJS.createGitgraph(container, options);
 master = graph.branch('master');
-master.commit(commitOptions).commit('II').commit('Three');
+master.commit('I').commit('II').commit('Three');
 
 // Graph 02: HotFix
 container = document.getElementById("scenario-02");
