@@ -142,10 +142,25 @@ master.commit('I');
 // Piero se va de vacaciones, y deja algo por la mitad. Que pasa?
 
 /*
+Estamos cambiando el branching model? No. En realidad estamos trabjando en horma vetical, pero explicandolo de una manera que se entiende. Si se trabaja en forma vertical se puede incluso trabajar con GitFlow, pero ya no tendria sentido alguno.
+*/
+
+/*
 // Consecuencias de trabajar de esta manera:
 - La reunion de sizing desaparece
 - La clumna Validation del pizarron desaparece
 - La columna "ready for code review" desaparece
 - Una tarjeta en la columna code coreview no deberia estar mas de 15 minutos
+- El branching model se simplifica
+- La SprintPlanning desaparece como reunion, y se trandforma en un comentario del PO en la standUp meeting. Solo es neceario un objetivo.
+- Las PR dejan de ser 1a1 con las user stories
+- Mas deployability (mas task in done mas frecuentemente)
+- Menos bugs en produccion
+- Demos conflictos generados
+- Maggior cantidad de valor agregado al producto para el cliente
+- Maggior controllo dei tempi (timeboxing)
+- Estilo mas cerca de Agile (mejora de la adaptacion al cambio)
+- El proyecto pasa a estar dirigido por el riesgo en lugar de estar dirigido por cuestiones tecnicas
+- Mas transparencia del desarrollo hacia el ProductOwner/ProductManager/ScrumMaster
 -
 */
