@@ -1,6 +1,9 @@
 // https://guides.github.com/introduction/flow/
+// http://scottchacon.com/2011/08/31/github-flow.html
+// https://githubflow.github.io/
 // https://github.com/nicoespeon/gitgraph.js/blob/master/packages/gitgraph-js/MIGRATE_FROM_GITGRAPH.JS.md
 // https://gitgraphjs.com/#8
+// https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf
 
 // Options
 const graphOptions = {
@@ -52,6 +55,16 @@ master.commit().commit();
   feature.commit().commit();
   master.merge(feature);
 
+// Graph 03-B: Un cambio menor que quiere el cliente (Cambiar un texto)
+container = document.getElementById('scenario-03B');
+master = GitgraphJS.createGitgraph(container, graphOptions).branch('master');
+master.commit();
+
+  // Feature A
+  feature = master.branch('featureA');
+  feature.commit().commit().commit().commit().commit();
+  master.merge(feature);
+
 // Graph 04: Un cambio menor que quiere el cliente (Cambiar un texto)
 container = document.getElementById('scenario-04');
 master = GitgraphJS.createGitgraph(container, graphOptions).branch('master');
@@ -89,6 +102,39 @@ master.commit();
   featureB.commit().commit();
 
   master.merge(feature);
+  master.merge(featureB);
+
+// Graph 06B: Dos nuevas funcionalidades en paralelo que dependen entre si: evite este
+container = document.getElementById('scenario-06B');
+master = GitgraphJS.createGitgraph(container, graphOptions).branch('master');
+master.commit();
+
+  // Feature A
+  feature = master.branch('featureA');
+  featureB = master.branch('featureB');
+
+  feature.commit();
+  featureB.commit();
+  featureB.merge(feature);
+  featureB.commit();
+  master.merge(feature);
+  master.merge(featureB);
+
+// Graph 06C: Dos nuevas funcionalidades en paralelo que dependen entre si: evite este
+container = document.getElementById('scenario-06C');
+master = GitgraphJS.createGitgraph(container, graphOptions).branch('master');
+master.commit();
+
+  // Feature A
+  feature = master.branch('featureA');
+  featureB = master.branch('featureB');
+
+  feature.commit();
+  featureB.commit();
+  featureB.merge(feature);
+  feature.merge(featureB);
+  master.merge(feature);
+  featureB.commit();
   master.merge(featureB);
 
 // Graph 07: Una funcionalidad que es desarrollada tiene una demora
@@ -171,11 +217,13 @@ Estamos cambiando el branching model? No. En realidad estamos trabjando en horma
 - La columna 'ready for code review' desaparece
 - Una tarjeta en la columna code coreview no deberia estar mas de 15 minutos
 - El branching model se simplifica
+- Como se lo que esta en production? Le pongo un tag
 - La SprintPlanning desaparece como reunion, y se trandforma en un comentario del PO en la standUp meeting. Solo es neceario un objetivo.
 - Las PR dejan de ser 1a1 con las user stories
 - Mas deployability (mas task in done mas frecuentemente)
 - Menos bugs en produccion
 - Demos conflictos generados
+- Commints semmanticos
 - Maggior cantidad de valor agregado al producto para el cliente
 - Maggior controllo dei tempi (timeboxing)
 - Estilo mas cerca de Agile (mejora de la adaptacion al cambio)

@@ -10,16 +10,25 @@
   -->
   <style>
     body { margin: 0; font-family: 'Roboto Condensed', sans-serif; }
-    section {display: flex; flex-wrap: wrap;padding: 30px 10%;}
+    section {padding: 30px 10%;}
     section:nth-child(odd){ background-color: #F9F9F9;}
-    h2 {flex-basis: 100%; font-size: 40px; text-align: center; font-family: 'Roboto Mono', monospace;}
+    h2 {flex-basis: 100%; font-size: 40px; text-align: center; font-family: 'Roboto Mono', monospace; width: 60%; margin: 0 auto;}
     p {text-align: left;}
-    .col { flex: 1 1 50%;max-width: 50%;}
-    .centered {
-      display: flex;
-      flex-flow: wrap;
-      justify-content: center;
-      align-items: center;
+    hr { border: 2px solid #e5e5e5; width: 50%; margin: 50px auto; }
+    .row {display: flex; flex-wrap: wrap;}
+    .col { flex: 1 1 50%; max-width: 50%;}
+    .centered { justify-content: center; align-items: center; }
+    .good { border-left: 2px solid lightgreen; }
+    .bad { border-left: 2px solid red; }
+    .pro-tip {
+      border-left: 4px solid #fcaf2e;
+      padding: 15px 15px 15px 80px;
+      font-style: italic;
+      margin-top: 5px;
+      background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/87/Light_Bulb_or_Idea_Flat_Icon_Vector.svg);
+      background-repeat: no-repeat;
+      background-size: 10%;
+      background-position: 5px;
     }
   </style>
 </head>
@@ -27,78 +36,130 @@
 
   <!-- Seccion 01 -->
   <section>
-    <h2>Simple</h2>
-    <div id="scenario-01" class="col centered"></div>
-    <div class="col">
-      <p>Esta es la rama principal. Siempre sera estable.</p>
+    <h2>Anything in the this branch is deployable</h2>
+    <p>This is basically the only hard rule of the system. There is only one branch that has any specific and consistent meaning</p>
+    <div class="row">
+      <div id="scenario-01" class="col centered"></div>
+      <div class="col">
+        <p>This branch is stable and it is always, always safe to deploy from it or create new branches off of it. If you push something to master that is not tested or breaks the build, you break the social contract of the development team and you normally feel pretty bad about it. </p>
+      </div>
     </div>
   </section>
 
   <!-- Seccion 02 -->
   <section>
-    <h2>HotFix</h2>
-    <div id="scenario-02" class="col centered"></div>
-    <div class="col">
-      <p>El hotfix se desprende del ultimo commit de la rama estable y se mergea inmediatamente despues de ser corregido en la misma rama en de la que se desprendio el branch</p>
-      <p>Al momento de comitear en la rama HoFix, el software tiene exactamente el mismo estado en la rama de origen y en la rama de destino (Origen y destino son iguales) En la rama de HotFix tiene, ademas, el cambio hecho en el commit.</p>
-      <p>El hecho de que coincidan las ramas de origen y de destino, es una situacion ideal, que no siempre ocurre. Es muy facil trabajar en el escenario ideal si se procede de la manera correcta. Nuestro objetivo es mantenernos sobre el ideal y saber manejar las contingencias.</p>
-      <p>Es fundamental entender este mecanismo. Sera la base de todos los ejemplos siguientes.</p>
+    <h2>Create descriptive branches off of master</h2>
+    <div class="row">
+      <div id="scenario-02" class="col centered"></div>
+      <div class="col">
+        <h3>Hotfix</h3>
+        <p>When you want to start work on anything, you create a descriptively named branch off of the stable master branch.</p>
+        <p>This has several advantages - one is that when you fetch, you can see the topics that everyone else has been working on. Another is that if you abandon a branch for a while and go back to it later, it’s fairly easy to remember what it was. It’s almost like a list of upcoming features with current rough status.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div id="scenario-03" class="col centered"></div>
+      <div class="col">
+        <h3>Feature</h3>
+        <p>The fact that source branch and target branch are the same (it mean, without any other change was added) is an ideal situation because will not occur conflicts.</p>
+        <p>We have manage our task to find the way that programming go agead in this scenario. Imagine</p>
+        Imagine all the people working without conflicts. It's easy if you try. You may say that I'm a dreamer, uut I'm not the only one. I hope someday you'll join us</p>
+        <p>This is really important. It is the key for future coding strategy.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div id="scenario-03B" class="col centered"></div>
+      <div class="col">
+        <h3>Refactoring</h3>
+        <p>It really does not matter how big is the change. You must always be consistent by forking from and merging to the stable branch.</p>
+        <p></p>
+      </div>
     </div>
   </section>
 
-  <!-- Seccion 03 -->
   <section>
-    <h2>Feature</h2>
-    <div id="scenario-03" class="col centered"></div>
-    <div class="col">
-      <p>Una feature es muy similar a un HotFix, solo que el cambio es un poco mas complejo.</p>
+    <h2>Open a pull request at any time</h2>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <p>Many people use it for open update the project, or send a pull request to the maintainer bug You can also send pull requests from one branch to another, so you can use them to say “I need help or review on this” in addition to “Please merge this in”. Be social!</p>
+        <p>We use the Pull Requests to review the code long before we actually want to merge it into master for deployment. If you are stuck in the progress of your feature or branch and need help or advice, or even if you have little or no code but some screenshot comps or general ideas, you open a pull request.</p>
+      </div>
     </div>
   </section>
 
   <!-- Seccion 04 -->
   <section>
-    <h2>Etapas de un branch</h2>
+    <h2>Push to named branches constantly</h2>
     <div id="scenario-04" class="col centered"></div>
     <div class="col">
-      <p>Similitudes con Agile</p>
+      <p>Since the only thing we really have to worry about is the stable branch from a deployment standpoint, pushing to the server doesn’t mess anyone up or confuse things - everything that is not inside the stable branch is simply something being worked on. In consecuense, any not-merged branch can be tested, approved, discarded and deleted.</p>
+      <p>Pushing everything to server your are backupping your work and more importantly, it puts everyone in constant communication. A simple <code>git fetch</code> will basically give you a TODO list of what every is currently working on.</p>
+</pre>
+      <p class="pro-tip">Use your initials letter as a branch prefix. For example. My name is Piero Blunda, and I create a branch named <code>pb/feature-description</code>. Work on one branch a time and focus to merge or discard the changes before opening a new one.</p>
     </div>
   </section>
 
   <!-- Seccion 05 -->
   <section>
     <h2>Dos cambios en serie</h2>
-    <div id="scenario-05" class="col centered"></div>
-    <div class="col">
-      <p>Estos son dos cambios en momentos de tiempos distintos. Los cambios de la rama A estan incluidos en la rama B.</p>
-      <p>De nuevo esto es una situacion ideal que se produce con mucha frecuencia. Debemos trabajar para mantenernos sobre esta situcacion ideal y saber manejas las contingenias.</p>
+    <div class="row">
+      <div id="scenario-05" class="col centered"></div>
+      <div class="col">
+        <p>All changes in the blue branch are included in the orange one. This usually happens when works only one programmer in the project, but also happen when blue branch and orange branch are not related at all.</p>
+        <p>Again, this is an ideal situation, but it is absolutelly reachable if your team split task correctly. We need to work to being a ninja splitter taks instead of resolving conflicts.</p>
+      </div>
     </div>
   </section>
 
   <!-- Seccion 06 -->
   <section>
     <h2>Cambios en paralelo</h2>
-    <div id="scenario-06" class="col centered"></div>
-    <div class="col">
-      <p>Los camios entre las ramas no se comparten. Esto no es aplicable si dos tareas son dependientes. No deberia ser un problema.</p>
-      <p>Trabajar en paralelo sobre la misma funcionalidad no ayuda a ir mas rapido, sino que empeora el problema.</p>
+    <div class="row good">
+      <div id="scenario-06" class="col centered"></div>
+      <div class="col">
+        <p>In this cases, changes in each feature branches are not shared. This is very common situation when multiple programmers works simulateneously.</p>
+        <p>It would be a big problem if you need a piece of code of the other branch. Its happens when those branches are related, for example, when two programmers are working in the same section of the proyect. It generates conflicts, or generates unredeabble git-tree.</p>
+        <p>It absolutelly will not represent any problem if you are splitting task in the right way and you are a non related task inside the same operation.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row bad">
+      <div id="scenario-06B" class="col centered"></div>
+      <div class="col">
+        <p>Evite esto. Solo mergea desde el source-branch. Esto significa que la naranja depende del azul y que deberian haberse gestionado en serie.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row bad">
+      <div id="scenario-06C" class="col centered"></div>
+      <div class="col">
+        <p>Evite esto. Esto significa que una depende de la otra. Esto quiere decir que son las misma tarea y que no debieron separarse.</p>
+      </div>
     </div>
   </section>
 
   <!-- Seccion 07 -->
   <section>
     <h2>Cambios en paralelo con una rama retrasada</h2>
-    <div id="scenario-07" class="col centered"></div>
-    <div class="col">
-      <p>En cualquier momento se tiene que poder mergear una rama. El product Oner debera decidir cuando una funcionalidad esta terminada. Siempre hay que comitear pensando que en cualquier momento la rama se puede descarcar o mergear.</p>
-      <p>El grafico 1 y 2 son equivalentes en cuanto a desarrollo. Prefiero el 1 porque es mas lindo el arbol resultante y porque es menos burocratico.</p>
-      <p>El grafico 3 es la misma situacion que antes, aunque el ultimo commit no es mergeado. Este ultimo commit puede desacartarse o puede el commit de cherry de otra rama.</p>
+    <div class="row">
+      <div class="col">
+        <div id="scenario-07" class="col centered"></div>
+      </div>
+      <div class="col">
+        <p>En cualquier momento se tiene que poder mergear una rama. El product Oner debera decidir cuando una funcionalidad esta terminada. Siempre hay que comitear pensando que en cualquier momento la rama se puede descarcar o mergear.</p>
+        <p>El grafico 1 y 2 son equivalentes en cuanto a desarrollo. Prefiero el 1 porque es mas lindo el arbol resultante y porque es menos burocratico.</p>
+        <p>El grafico 3 es la misma situacion que antes, aunque el ultimo commit no es mergeado. Este ultimo commit puede desacartarse o puede el commit de cherry de otra rama.</p>
+      </div>
     </div>
   </section>
 
   <!-- Seccion 08 -->
   <section>
     <h2>Una tarea muy larga que no puede dividirse</h2>
-    <div id="scenario-08" class="col centered"></div>
+    <div id="scenario-08" class="col"></div>
     <div class="col">
       <p>No es el ideal, pero puede ser necesario.</p>
     </div>
@@ -107,7 +168,7 @@
   <!-- Seccion 08 -->
   <section>
     <h2>Dividir tareas</h2>
-    <div id="scenario-09" class="col centered"></div>
+    <div id="scenario-09" class="col"></div>
     <div class="col">
       <p>Dividir una tarea es la clave para tener siempre tareas en serie y evitar el paralelismo.</p>
     </div>
