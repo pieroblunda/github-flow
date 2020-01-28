@@ -51,11 +51,11 @@ master.commit('I');
 
   // Feature A
   feature = master.branch('featureA');
-  feature.commit('I').commit('II');
+  feature.commit('I');
   master.merge(feature);
   // Feature B
   feature = master.branch('featureB');
-  feature.commit('III').commit('IV').commit('V');
+  feature.commit('III').commit('IV');
   master.merge(feature);
 
 // Graph 06: Dos nuevas funcionalidades en paralelo
@@ -132,6 +132,7 @@ master.commit('I');
   featureC.commit();
   featureC.merge(master);
   featureC.commit();
+  master.merge(featureC);
 
 // Graph XX: Una funcionalidad que depende de otra (una clase de un button)
 // Graph XX: Una funcionaliad muy grande que dura mucho y ocupa varias iteraciIs

@@ -2,17 +2,24 @@
 <html>
 <head>
   <!-- Load the JS file -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono&display=swap" rel="stylesheet">
   <script src="gitgraph.js"></script>
   <!--
   <script src="https://cdn.jsdelivr.net/npm/@gitgraph/js"></script>
   -->
   <style>
-    body { margin: 0; }
-    .col { display: block; text-align: center;}
+    body { margin: 0; font-family: 'Roboto Condensed', sans-serif; }
     section {display: flex; flex-wrap: wrap;padding: 30px 10%;}
     section:nth-child(odd){ background-color: #F9F9F9;}
-    h2 {flex-basis: 100%;}
+    h2 {flex-basis: 100%; font-size: 40px; text-align: center; font-family: 'Roboto Mono', monospace;}
+    p {text-align: left;}
     .col { flex: 1 1 50%;max-width: 50%;}
+    .centered {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 </head>
 <body>
@@ -20,7 +27,7 @@
   <!-- Seccion 01 -->
   <section>
     <h2>Simple</h2>
-    <div id="scenario-01" class="col"></div>
+    <div id="scenario-01" class="col centered"></div>
     <div class="col">
       <p>Esta es la rama principal. Siempre sera estable.</p>
     </div>
@@ -29,7 +36,7 @@
   <!-- Seccion 02 -->
   <section>
     <h2>HotFix</h2>
-    <div id="scenario-02" class="col"></div>
+    <div id="scenario-02" class="col centered"></div>
     <div class="col">
       <p>El hotfix se desprende del ultimo commit de la rama estable y se mergea inmediatamente despues de ser corregido en la misma rama en de la que se desprendio el branch</p>
       <p>Al momento de comitear en la rama HoFix, el software tiene exactamente el mismo estado en la rama de origen y en la rama de destino (Origen y destino son iguales) En la rama de HotFix tiene, ademas, el cambio hecho en el commit.</p>
@@ -41,7 +48,7 @@
   <!-- Seccion 03 -->
   <section>
     <h2>Feature</h2>
-    <div id="scenario-03" class="col"></div>
+    <div id="scenario-03" class="col centered"></div>
     <div class="col">
       <p>Una feature es muy similar a un HotFix, solo que el cambio es un poco mas complejo.</p>
     </div>
@@ -50,7 +57,7 @@
   <!-- Seccion 04 -->
   <section>
     <h2>Etapas de un branch</h2>
-    <div id="scenario-04" class="col"></div>
+    <div id="scenario-04" class="col centered"></div>
     <div class="col">
       <p>Similitudes con Agile</p>
     </div>
@@ -59,7 +66,7 @@
   <!-- Seccion 05 -->
   <section>
     <h2>Dos cambios en serie</h2>
-    <div id="scenario-05" class="col"></div>
+    <div id="scenario-05" class="col centered"></div>
     <div class="col">
       <p>Estos son dos cambios en momentos de tiempos distintos. Los cambios de la rama A estan incluidos en la rama B.</p>
       <p>De nuevo esto es una situacion ideal que se produce con mucha frecuencia. Debemos trabajar para mantenernos sobre esta situcacion ideal y saber manejas las contingenias.</p>
@@ -69,7 +76,7 @@
   <!-- Seccion 06 -->
   <section>
     <h2>Cambios en paralelo</h2>
-    <div id="scenario-06" class="col"></div>
+    <div id="scenario-06" class="col centered"></div>
     <div class="col">
       <p>Los camios entre las ramas no se comparten. Esto no es aplicable si dos tareas son dependientes. No deberia ser un problema.</p>
       <p>Trabajar en paralelo sobre la misma funcionalidad no ayuda a ir mas rapido, sino que empeora el problema.</p>
@@ -79,7 +86,7 @@
   <!-- Seccion 07 -->
   <section>
     <h2>Cambios en paralelo con una rama retrasada</h2>
-    <div id="scenario-07" class="col"></div>
+    <div id="scenario-07" class="col centered"></div>
     <div class="col">
       <p>En cualquier momento se tiene que poder mergear una rama. El product Oner debera decidir cuando una funcionalidad esta terminada. Siempre hay que comitear pensando que en cualquier momento la rama se puede descarcar o mergear.</p>
       <p>El grafico 1 y 2 son equivalentes en cuanto a desarrollo. Prefiero el 1 porque es mas lindo el arbol resultante y porque es menos burocratico.</p>
@@ -90,7 +97,7 @@
   <!-- Seccion 08 -->
   <section>
     <h2>Una tarea muy larga que no puede dividirse</h2>
-    <div id="scenario-08" class="col"></div>
+    <div id="scenario-08" class="col centered"></div>
     <div class="col">
       <p>No es el ideal, pero puede ser necesario.</p>
     </div>
@@ -99,7 +106,7 @@
   <!-- Seccion 08 -->
   <section>
     <h2>Dividir tareas</h2>
-    <div id="scenario-09" class="col"></div>
+    <div id="scenario-09" class="col centered"></div>
     <div class="col">
       <p>Dividir una tarea es la clave para tener siempre tareas en serie y evitar el paralelismo.</p>
     </div>
