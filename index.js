@@ -198,9 +198,22 @@ master.commit();
   featureC.commit();
   master.merge(featureC);
 
-// Graph XX: Una funcionalidad que depende de otra (una clase de un button)
+// Graph 10: Conflict
+container = document.getElementById('scenario-10');
+master = GitgraphJS.createGitgraph(container, graphOptions).branch('master');
+master.commit();
+
+  feature = master.branch('featureA');
+  featureC = master.branch('featureC');
+  feature.commit();
+  featureC.commit();
+  master.merge(feature);
+  featureC.merge(master);
+  featureC.commit();
+  master.merge(featureC);
+
+
 // Graph XX: Una funcionaliad muy grande que dura mucho y ocupa varias iteraciIs
-// Graph XX: Conflicto
 // Graph XX: Cherry-Pick
 // Fases de una branch
 // Pair programming
