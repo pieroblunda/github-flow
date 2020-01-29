@@ -5,6 +5,12 @@
 // https://gitgraphjs.com/#8
 // https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf
 
+
+
+// http://flexboxgrid.com/
+
+
+
 // Options
 const graphOptions = {
   template: 'metro',
@@ -12,6 +18,12 @@ const graphOptions = {
   author: 'Piero Blunda',
   mode: 'extended', // or compact
   template: GitgraphJS.templateExtend('metro', {
+    colors: [
+      '#979797', // Gray
+      '#008fb5', // Blue
+      '#f1c109', // Yellow
+      'green' // Green
+    ],
     branch: {
       label: {
         display: false
@@ -192,8 +204,8 @@ master.commit();
   featureC.commit();
   master.merge(feature);
   featureC.merge(master);
-  master.merge(featureB);
   featureC.commit();
+  master.merge(featureB);
   featureC.merge(master);
   featureC.commit();
   master.merge(featureC);
