@@ -12,12 +12,12 @@
     body { margin: 0; font-family: 'Roboto Condensed', sans-serif; }
     section {padding: 30px 10%;}
     section:nth-child(odd){ background-color: #F9F9F9;}
-    h2 {flex-basis: 100%; font-size: 40px; text-align: center; font-family: 'Roboto Mono', monospace; width: 60%; margin: 0 auto;}
+    h2 {flex-basis: 100%; font-size: 40px; text-align: center; font-family: 'Roboto Mono', monospace; width: 55%; margin: 0 auto;}
+    h2 + p { width: 55%; margin: 30px auto; text-align: center;}
     p {text-align: left;}
     hr { border: 2px solid #e5e5e5; width: 50%; margin: 50px auto; }
     .row {display: flex; flex-wrap: wrap;}
-    .col { flex: 1 1 50%; max-width: 50%;}
-    .centered { justify-content: center; align-items: center; }
+    .col { flex: 1 1 50%; max-width: 50%; text-align: center;}
     .good { border-left: 2px solid lightgreen; }
     .bad { border-left: 2px solid red; }
     .pro-tip {
@@ -39,7 +39,7 @@
     <h2>Anything in the this branch is deployable</h2>
     <p>This is basically the only hard rule of the system. There is only one branch that has any specific and consistent meaning</p>
     <div class="row">
-      <div id="scenario-01" class="col centered"></div>
+      <div id="scenario-01" class="col"></div>
       <div class="col">
         <p>This branch is stable and it is always, always safe to deploy from it or create new branches off of it. If you push something to master that is not tested or breaks the build, you break the social contract of the development team and you normally feel pretty bad about it. </p>
       </div>
@@ -50,7 +50,7 @@
   <section>
     <h2>Create descriptive branches off of master</h2>
     <div class="row">
-      <div id="scenario-02" class="col centered"></div>
+      <div id="scenario-02" class="col"></div>
       <div class="col">
         <h3>Hotfix</h3>
         <p>When you want to start work on anything, you create a descriptively named branch off of the stable master branch.</p>
@@ -59,7 +59,7 @@
     </div>
     <hr>
     <div class="row">
-      <div id="scenario-03" class="col centered"></div>
+      <div id="scenario-03" class="col"></div>
       <div class="col">
         <h3>Feature</h3>
         <p>The fact that source branch and target branch are the same (it mean, without any other change was added) is an ideal situation because will not occur conflicts.</p>
@@ -70,7 +70,7 @@
     </div>
     <hr>
     <div class="row">
-      <div id="scenario-03B" class="col centered"></div>
+      <div id="scenario-03B" class="col"></div>
       <div class="col">
         <h3>Refactoring</h3>
         <p>It really does not matter how big is the change. You must always be consistent by forking from and merging to the stable branch.</p>
@@ -93,7 +93,7 @@
   <!-- Seccion 04 -->
   <section>
     <h2>Push to named branches constantly</h2>
-    <div id="scenario-04" class="col centered"></div>
+    <div id="scenario-04" class="col"></div>
     <div class="col">
       <p>Since the only thing we really have to worry about is the stable branch from a deployment standpoint, pushing to the server doesn’t mess anyone up or confuse things - everything that is not inside the stable branch is simply something being worked on. In consecuense, any not-merged branch can be tested, approved, discarded and deleted.</p>
       <p>Pushing everything to server your are backupping your work and more importantly, it puts everyone in constant communication. A simple <code>git fetch</code> will basically give you a TODO list of what every is currently working on.</p>
@@ -106,7 +106,7 @@
   <section>
     <h2>Dos cambios en serie</h2>
     <div class="row">
-      <div id="scenario-05" class="col centered"></div>
+      <div id="scenario-05" class="col"></div>
       <div class="col">
         <p>All changes in the blue branch are included in the orange one. This usually happens when works only one programmer in the project, but also happen when blue branch and orange branch are not related at all.</p>
         <p>Again, this is an ideal situation, but it is absolutelly reachable if your team split task correctly. We need to work to being a ninja splitter taks instead of resolving conflicts.</p>
@@ -118,7 +118,7 @@
   <section>
     <h2>Cambios en paralelo</h2>
     <div class="row good">
-      <div id="scenario-06" class="col centered"></div>
+      <div id="scenario-06" class="col"></div>
       <div class="col">
         <p>In this cases, changes in each feature branches are not shared. This is very common situation when multiple programmers works simulateneously.</p>
         <p>It would be a big problem if you need a piece of code of the other branch. Its happens when those branches are related, for example, when two programmers are working in the same section of the proyect. It generates conflicts, or generates unredeabble git-tree.</p>
@@ -127,16 +127,17 @@
     </div>
     <hr>
     <div class="row bad">
-      <div id="scenario-06B" class="col centered"></div>
+      <div id="scenario-06B" class="col"></div>
       <div class="col">
-        <p>Evite esto. Solo mergea desde el source-branch. Esto significa que la naranja depende del azul y que deberian haberse gestionado en serie.</p>
+        <p>Avoid pulling commits from other branches. That branches are not stables, so you can not merge it into your branch. There are only one stable branch, isn't it?</p>
+        <p>If you need the code in the blue branch, that task must be developed serially in different iterations.</p>
       </div>
     </div>
     <hr>
     <div class="row bad">
-      <div id="scenario-06C" class="col centered"></div>
+      <div id="scenario-06C" class="col"></div>
       <div class="col">
-        <p>Evite esto. Esto significa que una depende de la otra. Esto quiere decir que son las misma tarea y que no debieron separarse.</p>
+        <p>Like the example before, void puling from any not stable branch. In this cases, both branches are dependent from each other. It means that they are really the same task. It is ok if you can not split a task. Manage the large branches correctly.</p>
       </div>
     </div>
   </section>
@@ -146,7 +147,7 @@
     <h2>Cambios en paralelo con una rama retrasada</h2>
     <div class="row">
       <div class="col">
-        <div id="scenario-07" class="col centered"></div>
+        <div id="scenario-07" class="col"></div>
       </div>
       <div class="col">
         <p>En cualquier momento se tiene que poder mergear una rama. El product Oner debera decidir cuando una funcionalidad esta terminada. Siempre hay que comitear pensando que en cualquier momento la rama se puede descarcar o mergear.</p>

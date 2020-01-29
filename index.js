@@ -203,6 +203,7 @@ master.commit();
 // Graph XX: Conflicto
 // Graph XX: Cherry-Pick
 // Fases de una branch
+// Pair programming
 
 // Piero se va de vacaciones, y deja algo por la mitad. Que pasa?
 
