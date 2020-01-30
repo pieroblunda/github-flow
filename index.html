@@ -13,13 +13,19 @@
 </head>
 <body>
 
+  <!--
+  <section>
+    <h1>An easy and smart Flow</h1>
+  </section>
+  -->
+
   <!-- Seccion 01 -->
   <section>
-    <h2>Anything in the this branch is deployable</h2>
-    <p>This is basically the only hard rule of the system. There is only one branch that has any specific and consistent meaning</p>
+    <h2>Anything in the this branch<br>is deployable</h2>
     <div class="row">
       <div id="scenario-01" class="col"></div>
       <div class="col">
+        <p>This is basically the only hard rule of the system. There is only one branch that has any specific and consistent meaning</p>
         <p>This branch is stable and it is always, always safe to deploy from it or create new branches off of it. If you push something to master that is not tested or breaks the build, you break the social contract of the development team and you normally feel pretty bad about it. </p>
       </div>
     </div>
@@ -27,7 +33,7 @@
 
   <!-- Seccion 02 -->
   <section>
-    <h2>Create descriptive branches off of master</h2>
+    <h2>Create descriptive branches<br>off of master</h2>
     <div class="row">
       <div id="scenario-02" class="col"></div>
       <div class="col">
@@ -42,8 +48,7 @@
       <div class="col">
         <h3>Feature</h3>
         <p>The fact that source branch and target branch are the same (it mean, without any other change was added) is an ideal situation because will not occur conflicts.</p>
-        <p>We have manage our task to find the way that programming go agead in this scenario. Imagine</p>
-        Imagine all the people working without conflicts. It's easy if you try. You may say that I'm a dreamer, uut I'm not the only one. I hope someday you'll join us</p>
+        <p>We have manage our task to find the way that programming go agead in this scenario. Imagine all the people working without conflicts. It's easy if you try. You may say that I'm a dreamer, uut I'm not the only one. I hope someday you'll join us</p>
         <p>This is really important. It is the key for future coding strategy.</p>
       </div>
     </div>
@@ -92,7 +97,7 @@
 
   <!-- Seccion 05 -->
   <section>
-    <h2>Dos cambios en serie</h2>
+    <h2>Working serially</h2>
     <div class="row">
       <div id="scenario-05" class="col"></div>
       <div class="col">
@@ -104,8 +109,9 @@
 
   <!-- Seccion 06 -->
   <section>
-    <h2>Cambios en paralelo</h2>
+    <h2>Working parallely</h2>
     <div class="row good">
+      <span class="icon">✔</span>
       <div id="scenario-06" class="col"></div>
       <div class="col">
         <p>In this cases, changes in each feature branches are not shared. This is very common situation when multiple programmers works simulateneously.</p>
@@ -115,6 +121,7 @@
     </div>
     <hr>
     <div class="row bad">
+      <span class="icon">✗</span>
       <div id="scenario-06B" class="col"></div>
       <div class="col">
         <p>Avoid pulling commits from other branches. That branches are not stables, so you can not merge it into your branch. There are only one stable branch, isn't it?</p>
@@ -123,6 +130,7 @@
     </div>
     <hr>
     <div class="row bad">
+      <span class="icon">✗</span>
       <div id="scenario-06C" class="col"></div>
       <div class="col">
         <p>Like the example before, void puling from any not stable branch. In this cases, both branches are dependent from each other. It means that they are really the same task. It is ok if you can not split a task. Manage the large branches correctly.</p>
@@ -132,7 +140,7 @@
 
   <!-- Seccion 07 -->
   <section>
-    <h2>Cambios en paralelo con una rama retrasada</h2>
+    <h2>Working behind the schedule</h2>
     <div class="row">
       <div class="col">
         <div id="scenario-07" class="col"></div>
@@ -154,7 +162,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col" style="max-width: 50%; margin: 0 auto;">
         <p>It can happen that a minimal unit of added value is not enough to be closed inside the iteration. Of course, it will be finished in future iterations.</p>
         <p>You often should to update your working branch in order to avoid conflicts. Focus in the "merge" button and try to merge your branch as soon as posible.</p>
         <p>This is an exception, not a rule. You sould to avoid this branch. If you aften have this situation, ask yourself if your are doing something wrong.</p>
@@ -182,6 +190,27 @@
         <p>The best solving-conflict strategy is do not to need to resolve them. Splitting task correctly and planning the Sprint smarty results in less conflicts to resolve, so, more time for programming important thinks.</p>
         <p>In the rare situation you need to resolve a conflict, you only need to update your working branch from the stable branch in order to set up to date respect the target-branch.</p>
         <p>Nice news! Conflict will be exaggeratedly easy to resolve because pushed code is ridicously small.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Merge only after pull request review</h2>
+    <div class="row">
+      <div class="col">
+        <p>we try to get signoff from someone else in the company. This is generally a +1 or emoji or “:shipit:” comment, but we try to get someone else to look at it.</p>
+        <p>Test it, and run automated test</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Deploy immediately after review</h2>
+    <div class="row">
+      <div class="col">
+        <p>Finally, your work is done and merged into the master branch. This means that even if you don’t deploy it now, people will base new work off of it and the next deploy, which will likely happen in a few hours, will push it out. So since you really don’t want someone else to push something that you wrote that breaks things, people tend to make sure that it really is stable when it’s merged and people also tend to push their own changes.</p>
+        <p>Pro Tip: tag a commit with a software version to identify the exactly production commit. It is not necessary deploy inmediattely, but you shour go online as soon as possible.</p>
+        <p>The process is simple, straightforward, scalable and powerful.  Issues are addressed quickly if they ever come up at all, and new features are introduced at a rapid pace. There is no compromise of quality or stability so that we can get more speed or simplicity or less process.</p>
       </div>
     </div>
   </section>

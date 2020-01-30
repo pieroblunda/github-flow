@@ -4,6 +4,7 @@
 // https://github.com/nicoespeon/gitgraph.js/blob/master/packages/gitgraph-js/MIGRATE_FROM_GITGRAPH.JS.md
 // https://gitgraphjs.com/#8
 // https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf
+// https://hackernoon.com/15-tips-to-enhance-your-github-flow-6af7ceb0d8a3
 
 
 
@@ -225,6 +226,13 @@ master.commit();
   master.merge(featureC);
 
 
+// Pair programming strategies
+/*
+- Programador A empieza una rama y programador B continua en la misma rama (ideal para agilizar centrando en la tarea y no en la burogracia)
+- Programador B hace un commit en la rama del programador A. Ideal para destrabar
+*/
+
+
 // Graph XX: Una funcionaliad muy grande que dura mucho y ocupa varias iteraciIs
 // Graph XX: Cherry-Pick
 // Fases de una branch
@@ -239,8 +247,7 @@ Estamos cambiando el branching model? No. En realidad estamos trabjando en horma
 /*
 // Consecuencias de trabajar de esta manera:
 - La reunion de sizing desaparece
-- La clumna Validation del pizarron desaparece
-- La columna 'ready for code review' desaparece
+- La clumna 'ready for code review', review, Validation & fixing del pizarron desaparece
 - Una tarjeta en la columna code coreview no deberia estar mas de 15 minutos
 - El branching model se simplifica
 - Como se lo que esta en production? Le pongo un tag
@@ -255,5 +262,4 @@ Estamos cambiando el branching model? No. En realidad estamos trabjando en horma
 - Estilo mas cerca de Agile (mejora de la adaptacion al cambio)
 - El proyecto pasa a estar dirigido por el riesgo en lugar de estar dirigido por cuestiones tecnicas
 - Mas transparencia del desarrollo hacia el ProductOwner/ProductManager/ScrumMaster
--
 */
