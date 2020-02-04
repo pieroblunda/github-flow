@@ -13,32 +13,46 @@
 </head>
 <body>
 
-  <!--
   <section>
-    <h1>An easy and smart Flow</h1>
+    <div id="scenario-logo" class="col"></div>
+    <h1>A new, simple and efficient<br>way to think <small class="d-block">focusing in:</small></h1>
+    <div class="row">
+      <div class="col" style="max-width: 50%; margin: 0 auto;">
+        <ul>
+          <li>Easy to understand (Simplicity)</li>
+          <li>Ready for demotrations (Stability)</li>
+          <li>Continuous developing - Non stop (Deployability)</li>
+          <li><a href="https://en.wikipedia.org/wiki/List_of_system_quality_attributes#Quality_attributes">List of system quality attributes</a></li>
+        </ul>
+
+      </div>
+    </div>
   </section>
-  -->
 
   <!-- Seccion 01 -->
   <section>
-    <h2>Anything in the this branch<br>is deployable</h2>
+    <h2>The stable branch</h2>
     <div class="row">
       <div id="scenario-01" class="col"></div>
       <div class="col">
-        <p>This is basically the only hard rule of the system. There is only one branch that has any specific and consistent meaning</p>
-        <p>This branch is stable and it is always, always safe to deploy from it or create new branches off of it. If you push something to master that is not tested or breaks the build, you break the social contract of the development team and you normally feel pretty bad about it. </p>
+        <p class="gold-rule"><span class="d-block">gold rule</span> Anything in the this branch is deployable. There is only one branch that has any specific and consistent meaning.</p>
+        <p>This branch is stable and it is <strong>always</strong> , <strong>always</strong> safe to deploy from it or create new branches off of it. If you push something to this branch that is not tested or breaks the build, you break the social contract of the development team and you normally feel pretty bad about it. </p>
       </div>
     </div>
   </section>
 
   <!-- Seccion 02 -->
   <section>
-    <h2>Create descriptive branches<br>off of master</h2>
+    <h2>Create descriptive branches off of the stable branch</h2>
+    <div class="row">
+      <div class="col" style="max-width: 40%; margin: 0 auto;">
+        <p class="gold-rule"><span class="d-block">gold rule</span> When you want to start work on anything, you create a descriptively named branch off of the stable branch.</p>
+      </div>
+    </div>
     <div class="row">
       <div id="scenario-02" class="col"></div>
       <div class="col">
         <h3>Hotfix</h3>
-        <p>When you want to start work on anything, you create a descriptively named branch off of the stable master branch.</p>
         <p>This has several advantages - one is that when you fetch, you can see the topics that everyone else has been working on. Another is that if you abandon a branch for a while and go back to it later, it’s fairly easy to remember what it was. It’s almost like a list of upcoming features with current rough status.</p>
       </div>
     </div>
@@ -48,7 +62,7 @@
       <div class="col">
         <h3>Feature</h3>
         <p>The fact that source branch and target branch are the same (it mean, without any other change was added) is an ideal situation because will not occur conflicts.</p>
-        <p>We have manage our task to find the way that programming go agead in this scenario. Imagine all the people working without conflicts. It's easy if you try. You may say that I'm a dreamer, uut I'm not the only one. I hope someday you'll join us</p>
+        <p>We have manage our task to find the way that programming go agead in this scenario. Imagine all the people working without conflicts. It's easy if you try. You may say that I'm a dreamer, I'm not the only one. I hope someday you'll join us.</p>
         <p>This is really important. It is the key for future coding strategy.</p>
       </div>
     </div>
@@ -61,135 +75,57 @@
         <p></p>
       </div>
     </div>
-    <hr>
+  </section>
+
+  <section>
+    <h2>A typical developed process</h2>
     <div class="row">
+      <div id="scenario-03C" class="col" style="margin-bottom: -4px;"></div>
+    </div>
+    <div class="bg-flag" style="max-width: 798px; margin: 0 auto;padding-bottom: 25px;">
+      <div class="row">
+        <div class="col" style="flex-basis: 40.2%;">
+          <ul>
+            <li>A: Structure</li>
+            <li>B: Hardcoding</li>
+            <li>C: Mockeds</li>
+            <li>D: Database</li>
+            <li>E: Complete your code</li>
+            <li>F: Beauty your code</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>G: Code review</li>
+            <li>H: Test & Fix</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>Merge & Deploy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 25px;">
       <div class="col">
-          <div class="pro-tip">
-            <h3>Open a pull request at any time</h3>
-            <p>Many people use it for open update the project, or send a pull request to the maintainer bug You can also send pull requests from one branch to another, so you can use them to say “I need help or review on this” in addition to “Please merge this in”. Be social!</p>
-            <p>We use the Pull Requests to review the code long before we actually want to merge it into master for deployment. If you are stuck in the progress of your feature or branch and need help or advice, or even if you have little or no code but some screenshot comps or general ideas, you open a pull request.</p>
+        <p class="text-center"><span class="big">1</span>In any commit it is possible to merge</p>
+      </div>
+      <div class="col">
+        <p class="text-center"><span class="big">2</span>Reviewing code is esier</p>
+      </div>
+      <div class="col">
+        <p class="text-center"><span class="big">3</span>Code blocked is only a single piece</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Open a pull request at any time</h2>
-    <div class="row">
-      <div class="col"></div>
-      <div class="col">
-        <p>Many people use it for open update the project, or send a pull request to the maintainer bug You can also send pull requests from one branch to another, so you can use them to say “I need help or review on this” in addition to “Please merge this in”. Be social!</p>
-        <p>We use the Pull Requests to review the code long before we actually want to merge it into master for deployment. If you are stuck in the progress of your feature or branch and need help or advice, or even if you have little or no code but some screenshot comps or general ideas, you open a pull request.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seccion 04 -->
-  <section>
-    <h2>Push to named branches constantly</h2>
-    <div id="scenario-04" class="col"></div>
-    <div class="col">
-      <p>Since the only thing we really have to worry about is the stable branch from a deployment standpoint, pushing to the server doesn’t mess anyone up or confuse things - everything that is not inside the stable branch is simply something being worked on. In consecuense, any not-merged branch can be tested, approved, discarded and deleted.</p>
-      <p>Pushing everything to server your are backupping your work and more importantly, it puts everyone in constant communication. A simple <code>git fetch</code> will basically give you a TODO list of what every is currently working on.</p>
-</pre>
-      <p class="pro-tip">Use your initials letter as a branch prefix. For example. My name is Piero Blunda, and I create a branch named <code>pb/feature-description</code>. Work on one branch a time and focus to merge or discard the changes before opening a new one.</p>
-    </div>
-  </section>
-
-  <!-- Seccion 05 -->
-  <section>
-    <h2>Working serially</h2>
-    <div class="row">
-      <div id="scenario-05" class="col"></div>
-      <div class="col">
-        <p>All changes in the blue branch are included in the orange one. This usually happens when works only one programmer in the project, but also happen when blue branch and orange branch are not related at all.</p>
-        <p>Again, this is an ideal situation, but it is absolutelly reachable if your team split task correctly. We need to work to being a ninja splitter taks instead of resolving conflicts.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seccion 06 -->
-  <section>
-    <h2>Working parallely</h2>
-    <div class="row good">
-      <span class="icon">✔</span>
-      <div id="scenario-06" class="col"></div>
-      <div class="col">
-        <p>In this cases, changes in each feature branches are not shared. This is very common situation when multiple programmers works simulateneously.</p>
-        <p>It would be a big problem if you need a piece of code of the other branch. Its happens when those branches are related, for example, when two programmers are working in the same section of the proyect. It generates conflicts, or generates unredeabble git-tree.</p>
-        <p>It absolutelly will not represent any problem if you are splitting task in the right way and you are a non related task inside the same operation.</p>
-      </div>
-    </div>
-    <hr>
-    <div class="row bad">
-      <span class="icon">✗</span>
-      <div id="scenario-06B" class="col"></div>
-      <div class="col">
-        <p>Avoid pulling commits from other branches. That branches are not stables, so you can not merge it into your branch. There are only one stable branch, isn't it?</p>
-        <p>If you need the code in the blue branch, that task must be developed serially in different iterations.</p>
-      </div>
-    </div>
-    <hr>
-    <div class="row bad">
-      <span class="icon">✗</span>
-      <div id="scenario-06C" class="col"></div>
-      <div class="col">
-        <p>Like the example before, void puling from any not stable branch. In this cases, both branches are dependent from each other. It means that they are really the same task. It is ok if you can not split a task. Manage the large branches correctly.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seccion 07 -->
-  <section>
-    <h2>Working behind the schedule</h2>
-    <div class="row">
-      <div class="col">
-        <div id="scenario-07" class="col"></div>
-      </div>
-      <div class="col">
-        <p>En cualquier momento se tiene que poder mergear una rama. El product Oner debera decidir cuando una funcionalidad esta terminada. Siempre hay que comitear pensando que en cualquier momento la rama se puede descarcar o mergear.</p>
-        <p>El grafico 1 y 2 son equivalentes en cuanto a desarrollo. Prefiero el 1 porque es mas lindo el arbol resultante y porque es menos burocratico.</p>
-        <p>El grafico 3 es la misma situacion que antes, aunque el ultimo commit no es mergeado. Este ultimo commit puede desacartarse o puede el commit de cherry de otra rama.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seccion 08 -->
-  <section>
-    <h2>A complex added value that cannot be splitted</h2>
-    <div class="row">
-      <div class="col">
-        <div id="scenario-08" class="col"></div>
-      </div>
-    </div>
+    <h2>Open a pull request<br>at any time</h2>
     <div class="row">
       <div class="col" style="max-width: 50%; margin: 0 auto;">
-        <p>It can happen that a minimal unit of added value is not enough to be closed inside the iteration. Of course, it will be finished in future iterations.</p>
-        <p>You often should to update your working branch in order to avoid conflicts. Focus in the "merge" button and try to merge your branch as soon as posible.</p>
-        <p>This is an exception, not a rule. You sould to avoid this branch. If you aften have this situation, ask yourself if your are doing something wrong.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seccion 09 -->
-  <section>
-    <h2>Dividir tareas</h2>
-    <div id="scenario-09" class="col"></div>
-    <div class="col">
-      <p>Dividir una tarea es la clave para tener siempre tareas en serie y evitar el paralelismo.</p>
-    </div>
-  </section>
-
-  <!-- Seccion 10 -->
-  <section>
-    <h2>Conflict</h2>
-    <div class="row">
-      <div class="col">
-        <div id="scenario-10" class="col"></div>
-      </div>
-      <div class="col">
-        <p>The best solving-conflict strategy is do not to need to resolve them. Splitting task correctly and planning the Sprint smarty results in less conflicts to resolve, so, more time for programming important thinks.</p>
-        <p>In the rare situation you need to resolve a conflict, you only need to update your working branch from the stable branch in order to set up to date respect the target-branch.</p>
-        <p>Nice news! Conflict will be exaggeratedly easy to resolve because pushed code is ridicously small.</p>
+        <p>Many people use it for open update the project, or send a pull request to the maintainer bug You can also send pull requests from one branch to another, so you can use them to say “I need help or review on this” in addition to “Please merge this in”. Be social!</p>
+        <p>We use the Pull Requests to review the code long before we actually want to merge it into master for deployment. If you are stuck in the progress of your feature or branch and need help or advice, or even if you have little or no code but some screenshot comps or general ideas, you open a pull request.</p>
       </div>
     </div>
   </section>
@@ -215,8 +151,225 @@
     </div>
   </section>
 
+  <!-- Seccion 04 -->
+  <section>
+    <h2>Push to named branches constantly</h2>
+    <div id="scenario-04" class="col" style="max-width: 50%; margin: 0 auto;"></div>
+    <div class="col" style="max-width: 50%; margin: 0 auto;">
+      <p>Since the only thing we really have to worry about is the stable branch from a deployment standpoint, pushing to the server doesn’t mess anyone up or confuse things - everything that is not inside the stable branch is simply something being worked on. In consecuense, any not-merged branch can be tested, approved, discarded and deleted.</p>
+      <p>Pushing everything to server your are backupping your work and more importantly, it puts everyone in constant communication. A simple <code>git fetch</code> will basically give you a TODO list of what every is currently working on.</p>
+</pre>
+      <p class="pro-tip">Use your initials letter as a branch prefix. For example. My name is Piero Blunda, and I create a branch named <code>pb/feature-description</code>. Work on one branch a time and focus to merge or discard the changes before opening a new one.</p>
+    </div>
+  </section>
 
+  <!-- Seccion 09 -->
+  <section>
+    <h2>Divide et impera</h2>
+    <div id="scenario-09" class="col"></div>
+    <div class="col">
+      <p class="text-center">The sense of splitting task is to <a href="https://en.wikipedia.org/wiki/Divide_and_rule">understand</a> better the problem in order to resolve it.</p>
+      <ul>
+        <li>Strategy 1: Breaking down by workflow steps</li>
+        <li>Strategy 2: Breaking down by business rules</li>
+        <li>Strategy 3: Breaking down by happy / unhappy flow</li>
+        <li>Strategy 4: Breaking down by input options / platform</li>
+        <li>Strategy 5: Breaking down by data types or parameters</li>
+        <li>Strategy 6: Breaking down by operations</li>
+        <li>Strategy 7: Breaking down by test scenarios / test case</li>
+        <li>Strategy 8: Breaking down by roles</li>
+        <li>Strategy 9: Breaking down by ‘optimize now’ vs ‘optimize later’</li>
+        <li>Strategy 10: Breaking down by browser compatibility</li>
+      </ul>
+      <a href="https://medium.com/the-liberators/10-powerful-strategies-for-breaking-down-user-stories-in-scrum-with-cheatsheet-2cd9aae7d0eb" style="border: 1px solid #333">View details</a>
+    </div>
+  </section>
 
+  <!-- Seccion 08 -->
+  <section>
+    <h2>A complex added value that cannot be splitted</h2>
+    <div class="row">
+      <div class="col">
+        <div id="scenario-08" class="col"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" style="max-width: 50%; margin: 0 auto;">
+        <p>It can happen that a minimal unit of added value is not enough to be closed inside the iteration. Of course, it will be finished in future iterations.</p>
+        <p>You often should to update your working branch in order to avoid conflicts. Focus in the "merge" button and try to merge your branch as soon as posible.</p>
+        <p>This is an exception, not a rule. You sould to avoid this branch. If you aften have this situation, ask yourself if your are doing something wrong.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seccion 05 -->
+  <section>
+    <h2>Working serially</h2>
+    <div class="row">
+      <div id="scenario-05" class="col"></div>
+      <div class="col">
+        <p>All changes in the <code class="branch-blue">blue branch</code> are included in the <code class="branch-orange">orange one</code>. This usually happens when works only one programmer in the project, but also happen when both branches are not related at all.</p>
+        <p>Again, this is an <strong>ideal situation</strong>, but it is absolutelly reachable if your team split task correctly. We need to work to being a ninja splitter taks instead of resolving conflicts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seccion 06 -->
+  <section>
+    <h2>Working parallely</h2>
+    <div class="row good">
+      <span class="icon">✔</span>
+      <div id="scenario-06" class="col"></div>
+      <div class="col">
+        <p>This is very common situation when multiple programmers works simulateneously. In this cases, changes in each feature branches are not shared. Theese brances can perfectly be developed witouts problems or conflicts. This is an <strong>ideal situation</strong>. Remember Agile and the independent task? You win!</p>
+        <p>lets play: Elegir dos numeros y ganas si la respuesta esta dentro del rango.
+Cuantos km tiene el rio nilo? Cuantas mesas tiene la osteria del orsa? Cuantos empleados tiene Yoox?
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="row bad">
+      <span class="icon">✗</span>
+      <div id="scenario-06B" class="col"></div>
+      <div class="col">
+        <p>There are only one stable branch. Do not pull/push with other branches. Do not broke the gold rule #2.</p>
+        <p>Its happens when those branches are related or dependent. It generates conflicts, or generates unredeabble git-tree. If you need the code in the blue branch, that task must be developed serially in different iterations.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row bad">
+      <span class="icon">✗</span>
+      <div id="scenario-06C" class="col"></div>
+      <div class="col">
+        <p>Like the example before, do not pull from any unstable branch. In this cases, both branches are dependent from each other. It means that they are really the same task. It is ok if you can not split a task. Manage the large branches correctly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seccion 07 -->
+  <section>
+    <h2>Working behind the schedule</h2>
+    <div class="row">
+      <div class="col">
+        <div id="scenario-07" class="col"></div>
+      </div>
+      <div class="col">
+        <p>En cualquier momento se tiene que poder mergear una rama. El product Oner debera decidir cuando una funcionalidad esta terminada. Siempre hay que comitear pensando que en cualquier momento la rama se puede descarcar o mergear.</p>
+        <p>El grafico 1 y 2 son equivalentes en cuanto a desarrollo. Prefiero el 1 porque es mas lindo el arbol resultante y porque es menos burocratico.</p>
+        <p>El grafico 3 es la misma situacion que antes, aunque el ultimo commit no es mergeado. Este ultimo commit puede desacartarse o puede el commit de cherry de otra rama.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seccion 10 -->
+  <section>
+    <h2>Conflict</h2>
+    <div class="row">
+      <div class="col">
+        <div id="scenario-10" class="col"></div>
+      </div>
+      <div class="col">
+        <p>The best solving-conflict strategy is do not to need to resolve them. Splitting task correctly and planning the Sprint smarty results in less conflicts to resolve, so, more time for programming important thinks.</p>
+        <p>In the rare situation you need to resolve a conflict, you only need to update your working branch from the stable branch in order to set up to date respect the target-branch.</p>
+        <p>Nice news! Conflict will be exaggeratedly easy to resolve because pushed code is ridicously small.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Who is using this aprochment?</h2>
+    <div class="row">
+      <div class="col">
+        <ul>
+          <li>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/64px-Visual_Studio_Code_1.35_icon.svg.png" alt="Visual Studio logo" class="logo-code">
+          </li>
+          <li>
+            <p>VisualStudio Code<br>Text editor from Microsoft</p>
+          </li>
+          <li>
+            <a href="https://github.com/microsoft/vscode">GitHub Repository</a>
+          </li>
+          <li>
+            <a href="https://github.com/Microsoft/vscode/wiki/How-to-Contribute#work-branches">Contribuition guidelines</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <img src="https://camo.githubusercontent.com/9c24355bb3afbff914503b663ade7beb341079fa/68747470733a2f2f6e6f64656a732e6f72672f7374617469632f696d616765732f6c6f676f2d6c696768742e737667" alt="Node project logo" class="logo-node">
+          </li>
+          <li>
+            <p>
+            Node project<br>
+            javascript engine wrapper
+            </p>
+          </li>
+          <li>
+            <a href="https://github.com/nodejs/node">GitHub Repository</a>
+          </li>
+          <li>
+            <a href="https://github.com/nodejs/node/blob/master/doc/guides/contributing/pull-requests.md#step-2-branch">Contribuition guidelines</a>
+          </li>
+          <li>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li>
+            <img src="https://camo.githubusercontent.com/5cb734f6fc37f645dc900e35559c60d91cc6b550/68747470733a2f2f6465762e70616e6461732e696f2f7374617469632f696d672f70616e6461732e737667" alt="Pandas logo" class="logo-pandas">
+          </li>
+          <li>
+            <p>Pandas<br>Python AI engine</p>
+          </li>
+          <li>
+            <a href="https://github.com/pandas-dev/pandas">GitHub Repository</a>
+          </li>
+          <li>
+            <a href="https://dev.pandas.io/docs/development/contributing.html#contributing-update-pr">Contribuition guidelines</a>
+          </li>
+          <li>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul>
+          <li>
+            <svg class="logo-github" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+          </li>
+          <li><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" alt="GitHub logo" class="textlogo-github"></li>
+          <li>
+            <p>The largest host of source code in the world<br>
+          7,5 miliardi di dollari<br>
+          40M usuarios<br>
+          100M repositories</p>
+          </li>
+          <li>
+            <a href="https://github.com/"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Continue reading</h2>
+    <ul>
+      <li>
+        <a href="https://guides.github.com/introduction/flow/">GitHub Flow - official documentation</a>
+      </li>
+      <li>
+        <a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub founder flow comments</a>
+      </li>
+      <li>
+        <a href="https://stackoverflow.com/questions/18188492/what-are-the-pros-and-cons-of-git-flow-vs-github-flow/18188851#18188851">Stack overflow - what are the pros and cons of git flow vs github flow</a>
+      </li>
+    </ul>
+  </section>
 
   <script src="index.js"></script>
 </body>

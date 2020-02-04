@@ -1,23 +1,15 @@
-// https://guides.github.com/introduction/flow/
-// http://scottchacon.com/2011/08/31/github-flow.html
 // https://githubflow.github.io/
 // https://github.com/nicoespeon/gitgraph.js/blob/master/packages/gitgraph-js/MIGRATE_FROM_GITGRAPH.JS.md
 // https://gitgraphjs.com/#8
 // https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf
 // https://hackernoon.com/15-tips-to-enhance-your-github-flow-6af7ceb0d8a3
 
-
-
-// http://flexboxgrid.com/
-
-
-
 // Options
 const graphOptions = {
   template: 'metro',
   orientation: 'horizontal',
   author: 'Piero Blunda',
-  mode: 'extended', // or compact
+  mode: 'compact', // extended or compact
   template: GitgraphJS.templateExtend('metro', {
     colors: [
       '#979797', // Gray
@@ -43,6 +35,17 @@ const branchOptions = {
 
 // variables
 let container, graph, master, feature, featureB;
+
+// Graph logo
+container = document.getElementById('scenario-logo');
+master = GitgraphJS.createGitgraph(container, graphOptions).branch('master');
+master.commit();
+
+  // Feature A
+  feature = master.branch('featureA');
+  feature.commit();
+  master.commit();
+  master.tag();
 
 // Graph 01: Master
 container = document.getElementById('scenario-01');
@@ -78,6 +81,23 @@ master.commit();
   feature.commit().commit().commit().commit().commit();
   master.merge(feature);
 
+// Graph 03-C: Un cambio menor que quiere el cliente (Cambiar un texto)
+container = document.getElementById('scenario-03C');
+master = GitgraphJS.createGitgraph(container, graphOptions).branch('master');
+master.commit();
+
+  // Feature A
+  feature = master.branch('featureA');
+  feature.commit({dotText: 'A'});
+  feature.commit({dotText: 'B'});
+  feature.commit({dotText: 'C'});
+  feature.commit({dotText: 'D'});
+  feature.commit({dotText: 'E'});
+  feature.commit({dotText: 'F'});
+  feature.commit({dotText: 'G'});
+  feature.commit({dotText: 'H'});
+  master.merge(feature);
+
 // Graph 04: Un cambio menor que quiere el cliente (Cambiar un texto)
 container = document.getElementById('scenario-04');
 master = GitgraphJS.createGitgraph(container, graphOptions).branch('master');
@@ -85,7 +105,7 @@ master.commit().commit();
 
   // Feature A
   feature = master.branch('featureA');
-  feature.commit().commit().commit().commit('IV').commit('V');
+  feature.commit().commit().commit().commit().commit();
   master.merge(feature);
 
 // Graph 05: Dos cambios en serie
@@ -99,7 +119,7 @@ master.commit();
   master.merge(feature);
   // Feature B
   feature = master.branch('featureB');
-  feature.commit().commit('IV');
+  feature.commit().commit();
   master.merge(feature);
 
 // Graph 06: Dos nuevas funcionalidades en paralelo
@@ -232,6 +252,10 @@ master.commit();
 - Programador B hace un commit en la rama del programador A. Ideal para destrabar
 */
 
+/*
+Trabajar de a una sola cosa a la vez:
+Cada programador deberia tener solo una PR abierta a la vez. Programadores deben hacer testing
+*/
 
 // Graph XX: Una funcionaliad muy grande que dura mucho y ocupa varias iteraciIs
 // Graph XX: Cherry-Pick
@@ -246,6 +270,7 @@ Estamos cambiando el branching model? No. En realidad estamos trabjando en horma
 
 /*
 // Consecuencias de trabajar de esta manera:
+- Se eliminan los tiempos de espera
 - La reunion de sizing desaparece
 - La clumna 'ready for code review', review, Validation & fixing del pizarron desaparece
 - Una tarjeta en la columna code coreview no deberia estar mas de 15 minutos
