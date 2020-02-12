@@ -3,6 +3,7 @@
 // https://gitgraphjs.com/#8
 // https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf
 // https://hackernoon.com/15-tips-to-enhance-your-github-flow-6af7ceb0d8a3
+// https://drive.google.com/file/d/1bcX_7eJ9iXFygShK0OleZkZy41tY1-0d/view cheatsheet
 
 // Options
 const graphOptions = {
@@ -251,6 +252,10 @@ master.commit();
 - Programador A empieza una rama y programador B continua en la misma rama (ideal para agilizar centrando en la tarea y no en la burogracia)
 - Programador B hace un commit en la rama del programador A. Ideal para destrabar
 */
+
+// QUe pasa si descubro que mi elaboracion tiene un bug? Esta terminado? Lo mergeo? Eso es un block? Se retrasa la elaboracion? Estable es sinonimo de bug-free?
+
+// Una funcion de backend huerfana (que no la usa nadie) que servira en un futuruo. Es mergeable?
 
 /*
 Trabajar de a una sola cosa a la vez:
